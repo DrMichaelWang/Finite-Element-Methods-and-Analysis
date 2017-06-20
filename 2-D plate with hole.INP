@@ -1,0 +1,59 @@
+*Heading 
+2-D plate with hole: 4-noded elements
+*RESTART, WRITE 
+*NODE
+99999,0.0,0.0
+*NODE,NSET=N1
+       1,     1.00000,      .00000
+*NODE,NSET=N2
+       5,     .00000,      1.00000
+*NODE,NSET=N3
+       16,    3.00000,      .00000
+*NODE,NSET=N4
+       20,     .00000,     3.00000
+*NODE,NSET=N5
+       26,    5.00000,      .00000
+*NODE,NSET=N6
+       28,    5.00000,     5.00000
+*NODE,NSET=N7
+       30,     .00000,     5.00000
+*NGEN,NSET=ARC1,LINE=C
+        1,      5,         1,     99999,0.,0.,0.
+*NGEN,NSET=ARC2,LINE=C
+       16,     20,         1,     99999,0.,0.,0.
+*NFILL,NSET=ALL, BIA= 1.000
+ARC1,ARC2,      3,         5
+*NGEN,NSET=ROW1
+       26,     28,         1     
+*NGEN,NSET=ROW1
+       28,     30,         1
+*NFILL,NSET=ALL, BIA= 1.000
+ARC2,ROW1,      2,         5
+*ELEMENT, ELSET=ALL, TYPE=CPE4
+       1,         1,       6,         7,       2
+*ELGEN,ELSET=TOP,GENERATE
+   19, 20,1
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1.0
+*NSET, NSET=YAXIS,GENERATE
+        5,      30,       5
+*NSET, NSET=YAXIS,GENERATE
+        1,      26,       5
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1.0
+*MATERIAL,NAME=ALUM
+*ELASTIC
+  .7000E+11, .3000e+00
+*STEP
+*STATIC
+1.0,1.0,1.e-6
+*BOUNDARY
+XAXIS,2,2,0.0
+YAXIS,1,1,0.0
+*DLOAD
+TOP,P2,-100e6
+*NODE PRINT, FREQ=0
+*EL PRINT, FREQ=0
+*RESTART, WRITE, FREQ=1000
+*END STEP
+   

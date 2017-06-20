@@ -1,0 +1,59 @@
+ *Heading 
+2-D plate with hole: 8-noded elements
+*NODE
+99999,0.0,0.0
+*NODE,NSET=N1
+       1,     1.00000,      .00000
+*NODE,NSET=N2
+      17,     .00000,      1.00000
+*NODE,NSET=N3
+      681,    6.00000,      .00000
+*NODE,NSET=N4
+      697,     .00000,     6.00000
+*NODE,NSET=N5
+      817,   20.00000,      .00000
+*NODE,NSET=N6
+      825,   20.00000,    20.00000
+*NODE,NSET=N7
+      833,     .00000,    20.00000
+*NGEN,NSET=ARC1,LINE=C
+        1,     17,         1,     99999,0.,0.,0.
+*NGEN,NSET=ARC2,LINE=C
+      681,    697,         1,     99999,0.,0.,0.
+*NFILL,NSET=ALL, BIAS= 1.000
+ARC1,ARC2,     40,        17
+*NGEN,NSET=ROW1
+      817,    825,         1     
+*NGEN,NSET=ROW1
+      825,    833,         1
+*NFILL,NSET=ALL, BIAS= 1.000
+ARC2,ROW1,      8,        17
+*ELEMENT, ELSET=ALL, TYPE=CPS8
+       1,         1,      35,        37,       3,     18,     36,      20,     2
+*ELGEN, ELSET=ALL
+       1,         8,       2,         1,      24,     34,      8
+*ELSET,ELSET=TOP,GENERATE
+      189,192,1
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1.0
+*NSET, NSET=YAXIS,GENERATE
+       17,     833,      17
+*NSET, NSET=XAXIS,GENERATE
+        1,     817,      17
+*MATERIAL,NAME=ALUM
+*ELASTIC
+  .7000E+11, .3000e+00
+*STEP
+*STATIC
+1.0,1.0,1.e-6
+*BOUNDARY
+XAXIS,2,2,0.0
+YAXIS,1,1,0.0
+*DLOAD
+TOP,P2,-100e6
+*NODE PRINT
+U,RF
+*EL PRINT
+S,E
+*END STEP
+  

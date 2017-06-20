@@ -1,0 +1,371 @@
+1
+
+  ABAQUS VERSION 6.4-1                                     DATE 27-Mar-2008   TIME 14:48:52        PAGE     1
+ 
+
+
+
+
+
+    AAAAAA     BBBBBBBBB      AAAAAA      QQQQQQQQ    U        U    SSSSSSSS
+   A      A    B        B    A      A    Q        Q   U        U   S
+  A        A   B        B   A        A   Q        Q   U        U   S
+  A        A   B        B   A        A   Q        Q   U        U   S
+  AAAAAAAAAA   BBBBBBBBB    AAAAAAAAAA   Q        Q   U        U    SSSSSSSS
+  A        A   B        B   A        A   Q    Q   Q   U        U            S
+  A        A   B        B   A        A   Q     Q  Q   U        U            S
+  A        A   B        B   A        A   Q      Q Q   U        U            S
+  A        A   BBBBBBBBB    A        A    QQQQQQQQ     UUUUUUUU     SSSSSSSS
+ 
+
+
+
+                      This program has been developed by
+ 
+                                  ABAQUS, Inc.
+                                1080 Main Street
+                             Pawtucket, R.I. 02860
+ 
+
+
+                   Available for internal use at University of Virginia. 
+                   Support of your usage is not included in the license
+                   price.  To purchase support, or send information to ABAQUS, Inc.
+                   about a suspected error, please follow the procedures
+                   described in the ABAQUS academic support instructions
+                   document. A copy of this document has been sent to the
+                   designated user at your site. Additional copies can be
+                   obtained by contacting ABAQUS, Inc. or your local ABAQUS
+                   representative.
+
+                   Should you have any questions concerning the terms of
+                   this academic license, please contact the designated
+                   user at your university, Brad Sayler
+ 
+                        On machine d107-12 
+                        you are authorized to run
+                        ABAQUS/Standard until 31-Dec-2008
+
+                        Your site id is: 08UVA_X 
+
+
+ 
+                    For assistance or any other information contact
+
+                           ABAQUS, INC.
+                           1080 Main Street
+                           Pawtucket, RI 02860-4847
+                           U.S.A.
+                           Tel: (1) 401 727 4200
+                           Fax: (1) 401 727 4208
+                           E-mail: info@abaqus.com
+                           Web: http://www.abaqus.com
+                           Technical support: support@abaqus.com 
+
+
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                 ABAQUS VERSION 6.4-1                    * 
+                *                                                         * 
+                *          BUILD ID: 2003_09_29-11.18.28 46457            * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using version 6.4 manuals     * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a monthly charge.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+          1-D Model of a Cantilever Beam: 2-noded elements  8 elements                                                                                                                                                                                                    
+  *NODE
+  *NGEN
+  *ELEMENT,ELSET=ALL, TYPE=B23
+  *ELGEN, ELSET=ALL
+  *MATERIAL, NAME=METAL
+  *ELASTIC
+  *BOUNDARY
+  *BEAM SECTION, SECTION=RECT, ELSET=ALL,MAT=METAL
+  *STEP
+  *STEP
+  *STEP
+  *STATIC
+  *EL PRINT
+  *END STEP
+  *BOUNDARY
+  *STEP
+  *STATIC
+  *CLOAD
+  *NODE PRINT
+  *END STEP
+1
+
+   ABAQUS VERSION 6.4-1                                 DATE 27-Mar-2008       TIME 14:48:53        PAGE    2
+   For use at None under academic license from ABAQUS, Inc.                                                                        
+
+     1-D Model of a Cantilever Beam: 2-noded elements  8 elements                    
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                     8
+          NUMBER OF NODES IS                                       17
+          NUMBER OF NODES DEFINED BY THE USER                       9
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM         8
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   43
+          (DEGREES OF FREEDOM PLUS ANY LAGRANGE MULTIPLIER VARIABLES)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.40000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.50000    
+       WALLCLOCK TIME (SEC) =          1
+1
+
+   ABAQUS VERSION 6.4-1                                     DATE 27-Mar-2008   TIME 14:48:54        PAGE    1
+   For use at None under academic license from ABAQUS, Inc.                                                                        
+
+     1-D Model of a Cantilever Beam: 2-noded elements  8 elements                              STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+  
+  
+  
+                   M E M O R Y   A N D   D I S K   E S T I M A T E
+  
+  
+           SUMMARY FOR CURRENT NODE ORDERING
+          (NOTE THAT IF NODE ORDERING CHANGES THE SIZE ESTIMATES FOR THE STEPS WILL CHANGE)
+  
+  
+           STEP   MAXIMUM DOF     FLOATING PT    MINIMUM MEMORY      MEMORY TO      REQUIRED DISKSPACE
+                  WAVEFRONT       OPERATIONS       REQUIRED        MINIMIZE I/O
+                                PER ITERATION     (MBYTES)           (MBYTES)          (KBYTES)
+  
+             1           9        1.89E+003         14.58              14.58              5.38
+          ----    ---------      ------------    -------------     -------------      -------------
+           MAX           9        1.89E+003         14.58              14.58              5.38
+  
+  
+          THE TABLE ABOVE PROVIDES A STEP BY STEP SUMMARY OF SOME BASIC SIZING INFORMATION
+          FOR THE PROBLEM. SOME FURTHER DESCRIPTION OF THE PARAMETERS GIVEN FOLLOWS:
+  
+          (1) MAXIMUM DOF WAVEFRONT - SIZE OF THE BIGGEST FRONT IN THE EQUATION SOLVER.
+              PROVIDES A BASIC SIZING OF THE MOST MEMORY INTENSIVE SEGMENT OF SOLVER.
+          (2) FLOATING POINT OPERATIONS PER ITERATION - MEASURE OF THE NUMBER OF FLOATING
+              POINT OPERATIONS REQUIRED FOR A SINGLE SOLVER PASS. ON A GIVEN PLATFORM
+              THE TIME REQUIRED FOR A SOLVER PASS WILL BE ROUGHLY A LINEAR FUNCTION
+              OF THIS VALUE.
+              NOTE - EXCEPT FOR THE FIRST STEP, THE VALUE IN THIS TABLE DOES NOT INCLUDE
+                     ADDITIONAL FLOATING POINT OPERATIONS THAT ARE REQUIRED IN MULTIPLE LOAD
+                     CASE STEPS WHEN CONSTRAINTS CHANGE FROM LOAD CASE TO LOAD CASE.  THIS
+                     SITUATION CAUSES A REORDERING TO BE PERFORMED, AT WHICH TIME AN UPPER
+                     BOUND ON THE NUMBER OF ADDITIONAL FLOATING POINT OPERATIONS WILL BE
+                     CALCULATED AND INCLUDED UNDER THE ESTIMATE SUMMARIES FOR THE RELEVANT
+                     STEPS (SEE NOTE BELOW ON REORDERING).
+          (3) MINIMUM MEMORY REQUIRED - MINIMUM POSSIBLE MEMORY VALUE FOR standard_memory
+              THAT ENABLES ABAQUS TO SOLVE THE PROBLEM. USE OF MEMORY WILL BE MINIMIZED BY
+              WRITING AS MUCH INFORMATION AS POSSIBLE TO DISK WHICH WILL INCREASE I/O TIME.
+          (4) MEMORY TO MINIMIZE I/O - VALUE OF standard_memory THAT ALLOWS ABAQUS TO KEEP
+              ALL SIGNIFICANT SCRATCH FILES IN MEMORY. THIS WILL MINIMIZE I/O TIME FOR THE USER
+              WITH ACCESS TO A LARGE AMOUNT OF MEMORY.
+          (5) REQUIRED DISKSPACE - AMOUNT OF DISK REQUIRED FOR SCRATCH FILES. THESE WILL BE
+              DELETED AT THE END OF THE ANALYSIS.
+  
+  
+           NOTE - WHENEVER POSSIBLE THE USER SHOULD SET standard_memory TO BE LESS THAN THE
+          PHYSICAL MEMORY ON THE MACHINE. UNLESS NECESSARY USERS SHOULD NOT MAKE USE
+          OF VIRTUAL MEMORY EVEN IN AN ATTEMPT TO KEEP SCRATCH FILES IN MEMORY.
+  
+           NOTE - IF A REORDERING IS PERFORMED (THIS WILL GENERALLY BE DONE ONLY FOR 3D-3D
+          LARGE SLIDING PROBLEMS), THE SIZE ESTIMATES DONE AT THIS TIME WILL NO LONGER BE VALID.
+          THE ESTIMATES WILL BE REDONE IN THE EVENT OF A REORDERING AND A NEW SUMMARY WILL BE
+          BE PRINTED FOR THE REMAINING STEPS.
+  
+  
+  
+           S I Z E   E S T I M A T E S   F O R   C U R R E N T   S T E P
+  
+          NUMBER OF EQUATIONS                        43
+          MAX DOF WAVEFRONT                          9
+          FLOATING POINT OPS PER SOLVER ITERATION   1.89E+003
+          MEMORY USED FOR STEP                      14.64 MBYTES
+  
+  
+           ESTIMATED FILE SIZES
+  
+           FILE            WORDS           KBYTES
+  
+          .fct           2184.000            2.133
+          .nck           512.000            0.500
+          .opr           2816.000            2.750
+          -------        -------          -------
+           TOTAL         5512.000            5.383
+  
+
+
+                                INCREMENT     1 SUMMARY
+
+
+ TIME INCREMENT COMPLETED   1.00    ,  FRACTION OF STEP COMPLETED   1.00    
+ STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
+
+
+
+                                                  E L E M E N T   O U T P U T
+
+
+
+
+
+   THE FOLLOWING TABLE IS PRINTED FOR ALL ELEMENTS WITH TYPE B23 AT THE INTEGRATION POINTS
+
+    ELEMENT  PT SEC FOOT-   S11         E11     
+                 PT NOTE 
+
+          1   1  1     -9.0590E+05 -9.0590E-06  
+          1   1  5      9.0590E+05  9.0590E-06  
+          1   2  1     -7.2000E+05 -7.2000E-06  
+          1   2  5      7.2000E+05  7.2000E-06  
+          1   3  1     -5.3410E+05 -5.3410E-06  
+          1   3  5      5.3410E+05  5.3410E-06  
+          2   1  1     -4.2590E+05 -4.2590E-06  
+          2   1  5      4.2590E+05  4.2590E-06  
+          2   2  1     -2.4000E+05 -2.4000E-06  
+          2   2  5      2.4000E+05  2.4000E-06  
+          2   3  1     -5.4097E+04 -5.4097E-07  
+          2   3  5      5.4097E+04  5.4097E-07  
+          3   1  1      5.4097E+04  5.4097E-07  
+          3   1  5     -5.4097E+04 -5.4097E-07  
+          3   2  1      2.4000E+05  2.4000E-06  
+          3   2  5     -2.4000E+05 -2.4000E-06  
+          3   3  1      4.2590E+05  4.2590E-06  
+          3   3  5     -4.2590E+05 -4.2590E-06  
+          4   1  1      5.3410E+05  5.3410E-06  
+          4   1  5     -5.3410E+05 -5.3410E-06  
+          4   2  1      7.2000E+05  7.2000E-06  
+          4   2  5     -7.2000E+05 -7.2000E-06  
+          4   3  1      9.0590E+05  9.0590E-06  
+          4   3  5     -9.0590E+05 -9.0590E-06  
+          5   1  1      9.0590E+05  9.0590E-06  
+          5   1  5     -9.0590E+05 -9.0590E-06  
+          5   2  1      7.2000E+05  7.2000E-06  
+          5   2  5     -7.2000E+05 -7.2000E-06  
+          5   3  1      5.3410E+05  5.3410E-06  
+          5   3  5     -5.3410E+05 -5.3410E-06  
+          6   1  1      4.2590E+05  4.2590E-06  
+          6   1  5     -4.2590E+05 -4.2590E-06  
+          6   2  1      2.4000E+05  2.4000E-06  
+          6   2  5     -2.4000E+05 -2.4000E-06  
+          6   3  1      5.4097E+04  5.4097E-07  
+          6   3  5     -5.4097E+04 -5.4097E-07  
+          7   1  1     -5.4097E+04 -5.4097E-07  
+          7   1  5      5.4097E+04  5.4097E-07  
+          7   2  1     -2.4000E+05 -2.4000E-06  
+          7   2  5      2.4000E+05  2.4000E-06  
+          7   3  1     -4.2590E+05 -4.2590E-06  
+          7   3  5      4.2590E+05  4.2590E-06  
+          8   1  1     -5.3410E+05 -5.3410E-06  
+          8   1  5      5.3410E+05  5.3410E-06  
+          8   2  1     -7.2000E+05 -7.2000E-06  
+          8   2  5      7.2000E+05  7.2000E-06  
+          8   3  1     -9.0590E+05 -9.0590E-06  
+          8   3  5      9.0590E+05  9.0590E-06  
+
+ MAXIMUM                9.0590E+05  9.0590E-06                                                                                    
+ ELEMENT                        1           8                                                                                     
+
+ MINIMUM               -9.0590E+05 -9.0590E-06                                                                                    
+ ELEMENT                        1           8                                                                                     
+
+
+
+
+                                       N O D E   O U T P U T
+
+
+
+
+   THE FOLLOWING TABLE IS PRINTED FOR ALL NODES
+
+       NODE FOOT-   U1          U2          UR3         RF1         RF2         RM3     
+            NOTE
+
+         1        0.000     -1.6000E-35 -1.0000E-35  2.4869E-14   16.00       10.00     
+         2      -1.4105E-22 -1.5625E-05 -9.0000E-05   0.000       0.000       0.000     
+         3      -1.8807E-22 -5.0000E-05 -1.2000E-04   0.000       0.000       0.000     
+         4      -1.4105E-22 -8.4375E-05 -9.0000E-05   0.000       0.000       0.000     
+         5        0.000     -1.0000E-04 -4.8021E-19   0.000       0.000       0.000     
+         6       1.4105E-22 -8.4375E-05  9.0000E-05   0.000       0.000       0.000     
+         7       1.8807E-22 -5.0000E-05  1.2000E-04   0.000       0.000       0.000     
+         8       1.4105E-22 -1.5625E-05  9.0000E-05   0.000       0.000       0.000     
+         9        0.000     -1.6000E-35  1.0000E-35 -2.4869E-14   16.00      -10.00     
+
+ MAXIMUM         1.8807E-22 -1.6000E-35  1.2000E-04  2.4869E-14   16.00       10.00    
+ AT NODE                 7           1           7           1           9           1
+
+ MINIMUM        -1.8807E-22 -1.0000E-04 -1.2000E-04 -2.4869E-14   0.000      -10.00    
+ AT NODE                 3           5           3           9           2           9
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.20000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.30000    
+       WALLCLOCK TIME (SEC) =          1

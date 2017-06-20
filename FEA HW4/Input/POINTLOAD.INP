@@ -1,0 +1,63 @@
+*Heading 
+POINT LOAD: 8-noded elements
+*NODE,NSET=N1
+       1,      0.00000,   100.00000
+*NODE,NSET=N1
+      81,      0.00000,   100.00000
+*NODE,NSET=N2
+     163,       .00000,    99.99999
+*NODE,NSET=N3
+     243,      0.00001,   100.00000
+*NODE,NSET=N4
+    8263,      0.00000,    50.00000
+*NODE,NSET=N5
+    8343,     50.00000,   100.00000
+*NODE,NSET=N6
+   14743,      0.00000,      .00000
+*NODE,NSET=N7
+   14783,    100.00000,     0.00000
+*NODE,NSET=N8
+   14823,    100.00000,   100.00000
+*NGEN,NSET=ARC1
+        1,     81,         1
+*NGEN,NSET=ARC2,LINE=C
+      163,    243,         1,     1,10.,0.,0.,0,0,1
+*NGEN,NSET=ARC3,LINE=C
+     8263,   8343,         1,     1,10.,0.,0.,0,0,1
+*NFILL,NSET=ALL, SINGULAR=1
+ARC1,ARC2,      2,        81
+*NFILL,NSET=ALL, BIAS=1.000
+ARC2,ARC3,    100,        81
+*NGEN,NSET=ROW1
+    14743,  14783,         1     
+*NGEN,NSET=ROW1
+    14783,  14823,         1
+*NFILL,NSET=ALL, BIAS= 1.000
+ARC3,ROW1,     80,        81
+*ELEMENT, ELSET=ALL, TYPE=CPS8
+       1,         1,     163,       165,       3,     82,    164,      84,     2
+*ELGEN, ELSET=ALL
+       1,        40,       2,         1,      91,    162,     40
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1000.0
+*NSET, NSET=YAXIS,GENERATE
+       1,      14743,       81
+*NSET, NSET=XAXIS,GENERATE
+   14743,      14783,      1
+*MATERIAL,NAME=ALUM
+*ELASTIC
+  .7000E+11, .3000e+00
+*STEP
+*STATIC
+1.0,1.0,1.e-6
+*BOUNDARY
+XAXIS,2,2,0.0
+YAXIS,1,1,0.0
+*CLOAD
+1,2,-1000
+*NODE PRINT
+U,RF
+*EL PRINT
+S,E
+*END STEP
+  

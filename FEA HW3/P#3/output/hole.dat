@@ -1,0 +1,540 @@
+1
+
+  ABAQUS VERSION 6.4-1                                     DATE 07-Apr-2008   TIME 16:25:20        PAGE     1
+ 
+
+
+
+
+
+    AAAAAA     BBBBBBBBB      AAAAAA      QQQQQQQQ    U        U    SSSSSSSS
+   A      A    B        B    A      A    Q        Q   U        U   S
+  A        A   B        B   A        A   Q        Q   U        U   S
+  A        A   B        B   A        A   Q        Q   U        U   S
+  AAAAAAAAAA   BBBBBBBBB    AAAAAAAAAA   Q        Q   U        U    SSSSSSSS
+  A        A   B        B   A        A   Q    Q   Q   U        U            S
+  A        A   B        B   A        A   Q     Q  Q   U        U            S
+  A        A   B        B   A        A   Q      Q Q   U        U            S
+  A        A   BBBBBBBBB    A        A    QQQQQQQQ     UUUUUUUU     SSSSSSSS
+ 
+
+
+
+                      This program has been developed by
+ 
+                                  ABAQUS, Inc.
+                                1080 Main Street
+                             Pawtucket, R.I. 02860
+ 
+
+
+                   Available for internal use at University of Virginia. 
+                   Support of your usage is not included in the license
+                   price.  To purchase support, or send information to ABAQUS, Inc.
+                   about a suspected error, please follow the procedures
+                   described in the ABAQUS academic support instructions
+                   document. A copy of this document has been sent to the
+                   designated user at your site. Additional copies can be
+                   obtained by contacting ABAQUS, Inc. or your local ABAQUS
+                   representative.
+
+                   Should you have any questions concerning the terms of
+                   this academic license, please contact the designated
+                   user at your university, Brad Sayler
+ 
+                        On machine d107-14 
+                        you are authorized to run
+                        ABAQUS/Standard until 31-Dec-2008
+
+                        Your site id is: 08UVA_X 
+
+
+ 
+                    For assistance or any other information contact
+
+                           ABAQUS, INC.
+                           1080 Main Street
+                           Pawtucket, RI 02860-4847
+                           U.S.A.
+                           Tel: (1) 401 727 4200
+                           Fax: (1) 401 727 4208
+                           E-mail: info@abaqus.com
+                           Web: http://www.abaqus.com
+                           Technical support: support@abaqus.com 
+
+
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                 ABAQUS VERSION 6.4-1                    * 
+                *                                                         * 
+                *          BUILD ID: 2003_09_29-11.18.28 46457            * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using version 6.4 manuals     * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a monthly charge.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+          2-D plate with hole: 4-noded elements                                                                                                                                                                                                                           
+  *NODE
+  *NODE,NSET=N1
+  *NODE,NSET=N2
+  *NODE,NSET=N3
+  *NODE,NSET=N4
+  *NODE,NSET=N5
+  *NGEN,NSET=ARC1,LINE=C
+  *NGEN,NSET=ROW1
+  *NGEN,NSET=ROW1
+  *NFILL,NSET=ALL, BIAS= 1.000
+  *ELEMENT, ELSET=ALL, TYPE=CPS4
+  *ELGEN, ELSET=ALL
+  *ELSET,ELSET=TOP,GENERATE
+  *NSET, NSET=YAXIS,GENERATE
+  *NSET, NSET=XAXIS,GENERATE
+  *MATERIAL,NAME=ALUM
+  *ELASTIC
+  *SOLID SECTION, ELSET=ALL, MAT=ALUM
+  *BOUNDARY
+  *SOLID SECTION, ELSET=ALL, MAT=ALUM
+  *STEP
+  *STEP
+  *STEP
+  *STATIC
+  *BOUNDARY
+  *DLOAD
+  *EL PRINT
+  *END STEP
+  *STEP
+  *STATIC
+  *BOUNDARY
+  *NODE PRINT
+  *END STEP
+1
+
+   ABAQUS VERSION 6.4-1                                 DATE 07-Apr-2008       TIME 16:25:21        PAGE    2
+   For use at None under academic license from ABAQUS, Inc.                                                                        
+
+     2-D plate with hole: 4-noded elements                                           
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    40
+          NUMBER OF NODES IS                                       54
+          NUMBER OF NODES DEFINED BY THE USER                      54
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                  108
+          (DEGREES OF FREEDOM PLUS ANY LAGRANGE MULTIPLIER VARIABLES)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.30000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.40000    
+       WALLCLOCK TIME (SEC) =          1
+1
+
+   ABAQUS VERSION 6.4-1                                     DATE 07-Apr-2008   TIME 16:25:23        PAGE    1
+   For use at None under academic license from ABAQUS, Inc.                                                                        
+
+     2-D plate with hole: 4-noded elements                                                     STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-06
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+  
+  
+  
+                   M E M O R Y   A N D   D I S K   E S T I M A T E
+  
+  
+           SUMMARY FOR CURRENT NODE ORDERING
+          (NOTE THAT IF NODE ORDERING CHANGES THE SIZE ESTIMATES FOR THE STEPS WILL CHANGE)
+  
+  
+           STEP   MAXIMUM DOF     FLOATING PT    MINIMUM MEMORY      MEMORY TO      REQUIRED DISKSPACE
+                  WAVEFRONT       OPERATIONS       REQUIRED        MINIMIZE I/O
+                                PER ITERATION     (MBYTES)           (MBYTES)          (KBYTES)
+  
+             1          24        2.49E+004         14.56              14.56             28.30
+          ----    ---------      ------------    -------------     -------------      -------------
+           MAX          24        2.49E+004         14.56              14.56             28.30
+  
+  
+          THE TABLE ABOVE PROVIDES A STEP BY STEP SUMMARY OF SOME BASIC SIZING INFORMATION
+          FOR THE PROBLEM. SOME FURTHER DESCRIPTION OF THE PARAMETERS GIVEN FOLLOWS:
+  
+          (1) MAXIMUM DOF WAVEFRONT - SIZE OF THE BIGGEST FRONT IN THE EQUATION SOLVER.
+              PROVIDES A BASIC SIZING OF THE MOST MEMORY INTENSIVE SEGMENT OF SOLVER.
+          (2) FLOATING POINT OPERATIONS PER ITERATION - MEASURE OF THE NUMBER OF FLOATING
+              POINT OPERATIONS REQUIRED FOR A SINGLE SOLVER PASS. ON A GIVEN PLATFORM
+              THE TIME REQUIRED FOR A SOLVER PASS WILL BE ROUGHLY A LINEAR FUNCTION
+              OF THIS VALUE.
+              NOTE - EXCEPT FOR THE FIRST STEP, THE VALUE IN THIS TABLE DOES NOT INCLUDE
+                     ADDITIONAL FLOATING POINT OPERATIONS THAT ARE REQUIRED IN MULTIPLE LOAD
+                     CASE STEPS WHEN CONSTRAINTS CHANGE FROM LOAD CASE TO LOAD CASE.  THIS
+                     SITUATION CAUSES A REORDERING TO BE PERFORMED, AT WHICH TIME AN UPPER
+                     BOUND ON THE NUMBER OF ADDITIONAL FLOATING POINT OPERATIONS WILL BE
+                     CALCULATED AND INCLUDED UNDER THE ESTIMATE SUMMARIES FOR THE RELEVANT
+                     STEPS (SEE NOTE BELOW ON REORDERING).
+          (3) MINIMUM MEMORY REQUIRED - MINIMUM POSSIBLE MEMORY VALUE FOR standard_memory
+              THAT ENABLES ABAQUS TO SOLVE THE PROBLEM. USE OF MEMORY WILL BE MINIMIZED BY
+              WRITING AS MUCH INFORMATION AS POSSIBLE TO DISK WHICH WILL INCREASE I/O TIME.
+          (4) MEMORY TO MINIMIZE I/O - VALUE OF standard_memory THAT ALLOWS ABAQUS TO KEEP
+              ALL SIGNIFICANT SCRATCH FILES IN MEMORY. THIS WILL MINIMIZE I/O TIME FOR THE USER
+              WITH ACCESS TO A LARGE AMOUNT OF MEMORY.
+          (5) REQUIRED DISKSPACE - AMOUNT OF DISK REQUIRED FOR SCRATCH FILES. THESE WILL BE
+              DELETED AT THE END OF THE ANALYSIS.
+  
+  
+           NOTE - WHENEVER POSSIBLE THE USER SHOULD SET standard_memory TO BE LESS THAN THE
+          PHYSICAL MEMORY ON THE MACHINE. UNLESS NECESSARY USERS SHOULD NOT MAKE USE
+          OF VIRTUAL MEMORY EVEN IN AN ATTEMPT TO KEEP SCRATCH FILES IN MEMORY.
+  
+           NOTE - IF A REORDERING IS PERFORMED (THIS WILL GENERALLY BE DONE ONLY FOR 3D-3D
+          LARGE SLIDING PROBLEMS), THE SIZE ESTIMATES DONE AT THIS TIME WILL NO LONGER BE VALID.
+          THE ESTIMATES WILL BE REDONE IN THE EVENT OF A REORDERING AND A NEW SUMMARY WILL BE
+          BE PRINTED FOR THE REMAINING STEPS.
+  
+  
+  
+           S I Z E   E S T I M A T E S   F O R   C U R R E N T   S T E P
+  
+          NUMBER OF EQUATIONS                        108
+          MAX DOF WAVEFRONT                          24
+          FLOATING POINT OPS PER SOLVER ITERATION   2.49E+004
+          MEMORY USED FOR STEP                      14.63 MBYTES
+  
+  
+           ESTIMATED FILE SIZES
+  
+           FILE           KWORDS           KBYTES
+  
+          .fct             1.542           12.047
+          .nck             0.320            2.500
+          .opr             1.760           13.750
+          -------        -------          -------
+           TOTAL           3.622           28.297
+  
+
+
+                                INCREMENT     1 SUMMARY
+
+
+ TIME INCREMENT COMPLETED   1.00    ,  FRACTION OF STEP COMPLETED   1.00    
+ STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
+
+
+
+                                                  E L E M E N T   O U T P U T
+
+
+
+
+
+   THE FOLLOWING TABLE IS PRINTED FOR ALL ELEMENTS WITH TYPE CPS4 AT THE INTEGRATION POINTS
+
+    ELEMENT  PT FOOT-       S11         S22         S12         E11         E22         E12     
+                NOTE 
+
+          1   1         4.7348E+07  2.2328E+09  2.7530E+08 -8.8927E-03  3.1694E-02  1.0226E-02  
+          1   2        -1.4019E+08  1.6429E+09  3.3701E+08 -9.0438E-03  2.4071E-02  1.2517E-02  
+          1   3         4.5172E+08  2.1611E+09 -5.1651E+08 -2.8088E-03  2.8937E-02 -1.9185E-02  
+          1   4         2.5179E+08  1.6106E+09 -4.1232E+08 -3.3056E-03  2.1930E-02 -1.5315E-02  
+          2   1        -1.2968E+08  1.6287E+09 -1.5787E+08 -8.8328E-03  2.3823E-02 -5.8639E-03  
+          2   2        -3.7460E+08  1.1833E+09 -1.0105E+06 -1.0423E-02  1.8509E-02 -3.7533E-05  
+          2   3         5.0226E+08  1.4935E+09 -5.2682E+08  7.7426E-04  1.9184E-02 -1.9568E-02  
+          2   4         2.6460E+08  1.1143E+09 -3.7609E+08 -9.9540E-04  1.4784E-02 -1.3969E-02  
+          3   1         1.3555E+07  9.5050E+08 -2.6721E+08 -3.8799E-03  1.3521E-02 -9.9250E-03  
+          3   2        -1.9732E+08  6.8412E+08 -1.4173E+08 -5.7508E-03  1.0619E-02 -5.2641E-03  
+          3   3         3.4819E+08  8.2636E+08 -3.7086E+08  1.4325E-03  1.0313E-02 -1.3775E-02  
+          3   4         1.6223E+08  6.0535E+08 -2.6263E+08 -2.7673E-04  7.9526E-03 -9.7549E-03  
+          4   1         2.3391E+07  4.4514E+08 -1.8182E+08 -1.5736E-03  6.2589E-03 -6.7533E-03  
+          4   2        -6.9884E+07  3.5667E+08 -1.3262E+08 -2.5269E-03  5.3948E-03 -4.9258E-03  
+          4   3         1.2031E+08  4.0469E+08 -1.8582E+08 -1.5697E-05  5.2657E-03 -6.9019E-03  
+          4   4         3.9960E+07  3.3058E+08 -1.4418E+08 -8.4592E-04  4.5513E-03 -5.3554E-03  
+          5   1        -1.1557E+08  1.3602E+08 -4.2082E+07 -2.2340E-03  2.4385E-03 -1.5630E-03  
+          5   2        -9.9240E+07  1.6192E+08 -5.3524E+07 -2.1117E-03  2.7384E-03 -1.9880E-03  
+          5   3        -1.1566E+08  1.7539E+08 -3.6770E+07 -2.4040E-03  3.0013E-03 -1.3657E-03  
+          5   4        -9.6334E+07  2.0530E+08 -5.0411E+07 -2.2561E-03  3.3458E-03 -1.8724E-03  
+          6   1        -4.6672E+08 -1.7961E+08  1.6098E+08 -5.8977E-03 -5.6564E-04  5.9791E-03  
+          6   2        -2.8874E+08 -2.3433E+07  7.1673E+07 -4.0244E-03  9.0270E-04  2.6621E-03  
+          6   3        -5.5722E+08  1.1269E+08  8.3347E+07 -8.4433E-03  3.9980E-03  3.0957E-03  
+          6   4        -3.4299E+08  2.8946E+08 -2.0432E+07 -6.1405E-03  5.6052E-03 -7.5891E-04  
+          7   1        -1.0943E+09 -4.3799E+08  3.8322E+08 -1.3756E-02 -1.5671E-03  1.4234E-02  
+          7   2        -7.3048E+08 -2.0387E+08  2.3567E+08 -9.5618E-03  2.1828E-04  8.7534E-03  
+          7   3        -1.2109E+09  2.0549E+08  3.5527E+07 -1.8179E-02  8.1251E-03  1.3196E-03  
+          7   4        -7.8419E+08  4.4577E+08 -1.1867E+08 -1.3113E-02  9.7290E-03 -4.4076E-03  
+          8   1        -1.7577E+09 -4.5721E+08  4.7439E+08 -2.3150E-02  1.0012E-03  1.7620E-02  
+          8   2        -1.1930E+09 -2.5095E+08  3.6626E+08 -1.5967E-02  1.5278E-03  1.3604E-02  
+          8   3        -1.8262E+09 -2.6405E+07 -3.3668E+08 -2.5976E-02  7.4494E-03 -1.2505E-02  
+          8   4        -1.2215E+09  1.6622E+08 -4.0138E+08 -1.8162E-02  7.6096E-03 -1.4908E-02  
+          9   1         6.0476E+07  1.3469E+09  3.7922E+08 -4.9085E-03  1.8982E-02  1.4085E-02  
+          9   2        -9.5822E+07  8.5666E+08  4.3221E+08 -5.0403E-03  1.2649E-02  1.6054E-02  
+          9   3         4.7481E+08  1.3443E+09 -3.5957E+08  1.0217E-03  1.7170E-02 -1.3355E-02  
+          9   4         3.0504E+08  8.8077E+08 -2.7033E+08  5.8300E-04  1.1275E-02 -1.0041E-02  
+         10   1        -2.0691E+08  9.8309E+08  1.0950E+08 -7.1690E-03  1.4931E-02  4.0671E-03  
+         10   2        -4.0122E+08  6.3239E+08  2.3403E+08 -8.4420E-03  1.0754E-02  8.6925E-03  
+         10   3         3.9940E+08  9.6146E+08 -2.3934E+08  1.5852E-03  1.2023E-02 -8.8899E-03  
+         10   4         2.0643E+08  6.5612E+08 -1.1720E+08  1.3704E-04  8.4885E-03 -4.3532E-03  
+         11   1        -1.1742E+08  6.1875E+08  9.5089E+04 -4.3292E-03  9.3425E-03  3.5319E-06  
+         11   2        -2.5920E+08  4.2886E+08  8.6145E+07 -5.5408E-03  7.2374E-03  3.1997E-03  
+         11   3         1.4788E+08  5.6858E+08 -1.1070E+08 -3.2420E-04  7.4888E-03 -4.1119E-03  
+         11   4         2.1171E+07  4.0874E+08 -3.5022E+07 -1.4493E-03  5.7484E-03 -1.3008E-03  
+         12   1        -9.0998E+07  4.0434E+08 -3.0676E+07 -3.0328E-03  6.1663E-03 -1.1394E-03  
+         12   2        -1.3793E+08  3.2035E+08  3.4076E+06 -3.3433E-03  5.1675E-03  1.2657E-04  
+         12   3        -6.4880E+07  3.4831E+08 -7.2175E+07 -2.4196E-03  5.2539E-03 -2.6808E-03  
+         12   4        -1.0513E+08  2.7786E+08 -4.2595E+07 -2.6927E-03  4.4199E-03 -1.5821E-03  
+         13   1        -1.0912E+08  2.9653E+08 -7.7054E+07 -2.8296E-03  4.7037E-03 -2.8620E-03  
+         13   2        -8.1908E+07  2.9053E+08 -8.2514E+07 -2.4152E-03  4.5014E-03 -3.0648E-03  
+         13   3        -1.5447E+08  2.5112E+08 -1.0778E+08 -3.2830E-03  4.2495E-03 -4.0033E-03  
+         13   4        -1.2160E+08  2.4488E+08 -1.1365E+08 -2.7867E-03  4.0195E-03 -4.2214E-03  
+         14   1        -2.5518E+08  3.9309E+07 -5.3389E+07 -3.8139E-03  1.6552E-03 -1.9830E-03  
+         14   2        -1.3121E+08  1.3626E+08 -1.1164E+08 -2.4584E-03  2.5089E-03 -4.1468E-03  
+         14   3        -2.9611E+08  2.3975E+08 -1.4042E+08 -5.2576E-03  4.6940E-03 -5.2154E-03  
+         14   4        -1.4878E+08  3.4830E+08 -2.0660E+08 -3.6181E-03  5.6133E-03 -7.6737E-03  
+         15   1        -5.7636E+08 -2.9544E+08  1.0289E+08 -6.9675E-03 -1.7504E-03  3.8216E-03  
+         15   2        -2.8673E+08 -1.0912E+08 -1.4538E+07 -3.6284E-03 -3.3006E-04 -5.3997E-04  
+         15   3        -5.8948E+08  3.0167E+08 -2.2494E+08 -9.7139E-03  6.8358E-03 -8.3548E-03  
+         15   4        -2.5714E+08  4.8876E+08 -3.4500E+08 -5.7681E-03  8.0843E-03 -1.2814E-02  
+         16   1        -9.1151E+08 -4.5067E+08  3.1180E+08 -1.1090E-02 -2.5317E-03  1.1581E-02  
+         16   2        -4.3631E+08 -2.7596E+08  2.1960E+08 -5.0503E-03 -2.0724E-03  8.1567E-03  
+         16   3        -9.1110E+08 -1.5966E+07 -4.4498E+08 -1.2947E-02  3.6766E-03 -1.6528E-02  
+         16   4        -4.0871E+08  1.4441E+08 -5.0008E+08 -6.4576E-03  3.8146E-03 -1.8575E-02  
+         17   1         4.1296E+07  5.8928E+08  4.5111E+08 -1.9356E-03  8.2414E-03  1.6756E-02  
+         17   2        -9.8300E+07  1.5173E+08  4.9878E+08 -2.0546E-03  2.5888E-03  1.8526E-02  
+         17   3         4.6890E+08  6.3421E+08 -2.8093E+08  3.9805E-03  7.0506E-03 -1.0435E-02  
+         17   4         3.1549E+08  2.1618E+08 -2.0013E+08  3.5805E-03  1.7362E-03 -7.4333E-03  
+         18   1        -2.6205E+08  4.4840E+08  2.4607E+08 -5.6652E-03  7.5288E-03  9.1397E-03  
+         18   2        -4.2349E+08  1.5938E+08  3.4960E+08 -6.7330E-03  4.0918E-03  1.2985E-02  
+         18   3         3.3081E+08  5.0219E+08 -9.0038E+07  2.5736E-03  5.7564E-03 -3.3443E-03  
+         18   4         1.6719E+08  2.4564E+08  1.3295E+07  1.3358E-03  2.7926E-03  4.9382E-04  
+         19   1        -1.5046E+08  3.3591E+08  1.0941E+08 -3.5891E-03  5.4435E-03  4.0637E-03  
+         19   2        -2.5252E+08  1.9194E+08  1.7248E+08 -4.4300E-03  3.8242E-03  6.4064E-03  
+         19   3         6.9391E+07  3.2794E+08 -1.2521E+06 -4.1415E-04  4.3874E-03 -4.6506E-05  
+         19   4        -2.2931E+07  2.0513E+08  5.5217E+07 -1.2067E-03  3.0287E-03  2.0509E-03  
+         20   1        -7.4088E+07  2.7289E+08  2.1821E+07 -2.2279E-03  4.2159E-03  8.1051E-04  
+         20   2        -1.1767E+08  1.9241E+08  5.4058E+07 -2.5055E-03  3.2530E-03  2.0079E-03  
+         20   3        -3.9574E+07  2.3773E+08 -2.8991E+07 -1.5842E-03  3.5657E-03 -1.0768E-03  
+         20   4        -7.7265E+07  1.6961E+08 -7.2976E+05 -1.8307E-03  2.7541E-03 -2.7105E-05  
+         21   1        -4.4328E+07  2.4090E+08 -6.0935E+07 -1.6657E-03  3.6314E-03 -2.2633E-03  
+         21   2        -1.2359E+07  2.3824E+08 -6.8567E+07 -1.1976E-03  3.4564E-03 -2.5468E-03  
+         21   3        -8.3715E+07  1.9710E+08 -9.7183E+07 -2.0407E-03  3.1745E-03 -3.6097E-03  
+         21   4        -4.5544E+07  1.9476E+08 -1.0549E+08 -1.4853E-03  2.9775E-03 -3.9183E-03  
+         22   1        -5.4061E+07  1.2034E+08 -1.1956E+08 -1.2881E-03  1.9508E-03 -4.4409E-03  
+         22   2         3.5024E+07  1.8234E+08 -1.5887E+08 -2.8110E-04  2.4547E-03 -5.9008E-03  
+         22   3        -6.7684E+07  2.5755E+08 -2.0355E+08 -2.0707E-03  3.9693E-03 -7.5604E-03  
+         22   4         3.6964E+07  3.2637E+08 -2.4726E+08 -8.7065E-04  4.5040E-03 -9.1839E-03  
+         23   1        -1.3019E+08 -2.0416E+08 -2.6836E+07 -9.8492E-04 -2.3587E-03 -9.9677E-04  
+         23   2         1.1100E+08 -4.8551E+07 -1.2484E+08  1.7937E-03 -1.1693E-03 -4.6371E-03  
+         23   3        -7.5332E+07  3.6643E+08 -3.4127E+08 -2.6466E-03  5.5575E-03 -1.2676E-02  
+         23   4         1.9621E+08  5.1970E+08 -4.3965E+08  5.7566E-04  6.5834E-03 -1.6330E-02  
+         24   1        -1.7441E+08 -4.2004E+08  2.3832E+08 -6.9134E-04 -5.2532E-03  8.8519E-03  
+         24   2         2.5720E+08 -2.6146E+08  1.5469E+08  4.7948E-03 -4.8375E-03  5.7457E-03  
+         24   3        -1.2710E+08  2.4487E+07 -5.1734E+08 -1.9206E-03  8.9451E-04 -1.9216E-02  
+         24   4         3.2462E+08  1.6866E+08 -5.6677E+08  3.9146E-03  1.0182E-03 -2.1052E-02  
+         25   1         1.2308E+07 -9.9866E+07  4.9869E+08  6.0382E-04 -1.4794E-03  1.8523E-02  
+         25   2        -1.2010E+08 -5.1592E+08  5.4274E+08  4.9531E-04 -6.8556E-03  2.0159E-02  
+         25   3         4.5002E+08 -1.9406E+07 -2.6698E+08  6.5121E-03 -2.2059E-03 -9.9166E-03  
+         25   4         3.0409E+08 -4.2002E+08 -1.9069E+08  6.1442E-03 -7.3035E-03 -7.0829E-03  
+         26   1        -2.9470E+08  4.4471E+06  2.7946E+08 -4.2291E-03  1.3265E-03  1.0380E-02  
+         26   2        -4.3065E+08 -2.3620E+08  3.6672E+08 -5.1399E-03 -1.5286E-03  1.3621E-02  
+         26   3         2.8300E+08  1.1127E+08 -4.1004E+07  3.5659E-03  3.7675E-04 -1.5230E-03  
+         26   4         1.4267E+08 -1.0604E+08  4.7360E+07  2.4925E-03 -2.1262E-03  1.7591E-03  
+         27   1        -1.3039E+08  1.1794E+08  1.1373E+08 -2.3682E-03  2.2437E-03  4.2242E-03  
+         27   2        -2.0262E+08  1.6524E+07  1.5830E+08 -2.9654E-03  1.1044E-03  5.8796E-03  
+         27   3         5.3751E+07  1.3963E+08  1.9849E+07  1.6943E-04  1.7644E-03  7.3726E-04  
+         27   4        -1.2501E+07  5.1930E+07  6.0284E+07 -4.0114E-04  7.9544E-04  2.2391E-03  
+         28   1        -3.5468E+07  1.4821E+08  2.5590E+07 -1.1419E-03  2.2692E-03  9.5048E-04  
+         28   2        -6.6564E+07  9.7761E+07  4.6943E+07 -1.3699E-03  1.6819E-03  1.7436E-03  
+         28   3         5.3750E+06  1.4258E+08 -1.0954E+07 -5.3427E-04  2.0138E-03 -4.0688E-04  
+         28   4        -2.1865E+07  9.9445E+07  7.8750E+06 -7.3854E-04  1.5143E-03  2.9250E-04  
+         29   1         4.7849E+06  1.6157E+08 -3.3498E+07 -6.2407E-04  2.2876E-03 -1.2442E-03  
+         29   2         1.7463E+07  1.5566E+08 -3.5182E+07 -4.1765E-04  2.1489E-03 -1.3068E-03  
+         29   3        -1.2852E+07  1.2741E+08 -5.1718E+07 -7.2962E-04  1.8752E-03 -1.9210E-03  
+         29   4         2.2482E+06  1.2110E+08 -5.3373E+07 -4.8688E-04  1.7204E-03 -1.9824E-03  
+         30   1         9.2421E+07  1.3230E+08 -1.0110E+08  7.5329E-04  1.4939E-03 -3.7551E-03  
+         30   2         1.4409E+08  1.6651E+08 -1.2331E+08  1.3448E-03  1.7612E-03 -4.5801E-03  
+         30   3         9.7345E+07  2.1698E+08 -1.5963E+08  4.6074E-04  2.6825E-03 -5.9290E-03  
+         30   4         1.5729E+08  2.5454E+08 -1.8393E+08  1.1561E-03  2.9622E-03 -6.8315E-03  
+         31   1         2.4611E+08 -1.4189E+08 -4.8264E+07  4.1239E-03 -3.0817E-03 -1.7927E-03  
+         31   2         4.4656E+08 -1.1169E+07 -1.3038E+08  6.4273E-03 -2.0734E-03 -4.8428E-03  
+         31   3         3.4784E+08  4.0119E+08 -3.4287E+08  3.2498E-03  4.2406E-03 -1.2735E-02  
+         31   4         5.6970E+08  5.2764E+08 -4.2409E+08  5.8773E-03  5.0961E-03 -1.5752E-02  
+         32   1         5.0918E+08 -3.8177E+08  2.3933E+08  8.9101E-03 -7.6360E-03  8.8892E-03  
+         32   2         9.2843E+08 -2.2938E+08  1.5985E+08  1.4246E-02 -7.2559E-03  5.9373E-03  
+         32   3         5.9155E+08  7.0244E+07 -5.6225E+08  8.1496E-03 -1.5317E-03 -2.0883E-02  
+         32   4         1.0270E+09  2.0874E+08 -6.0795E+08  1.3777E-02 -1.4196E-03 -2.2581E-02  
+         33   1        -9.4458E+06 -7.6083E+08  5.2386E+08  3.1257E-03 -1.0828E-02  1.9458E-02  
+         33   2        -1.4169E+08 -1.1790E+09  5.6482E+08  3.0287E-03 -1.6236E-02  2.0979E-02  
+         33   3         4.2481E+08 -6.5310E+08 -3.1600E+08  8.8678E-03 -1.1151E-02 -1.1737E-02  
+         33   4         2.8015E+08 -1.0580E+09 -2.4190E+08  8.5365E-03 -1.6315E-02 -8.9850E-03  
+         34   1        -3.0445E+08 -3.4946E+08  2.1885E+08 -2.8515E-03 -3.6876E-03  8.1286E-03  
+         34   2        -4.1492E+08 -5.3921E+08  2.8993E+08 -3.6166E-03 -5.9247E-03  1.0769E-02  
+         34   3         2.4142E+08 -2.0879E+08 -6.4849E+07  4.3437E-03 -4.0174E-03 -2.4087E-03  
+         34   4         1.2513E+08 -3.8296E+08  7.8076E+06  3.4288E-03 -6.0072E-03  2.9000E-04  
+         35   1        -9.0494E+07 -1.4208E+07  5.1257E+07 -1.2319E-03  1.8486E-04  1.9038E-03  
+         35   2        -1.3182E+08 -6.1795E+07  7.5129E+07 -1.6183E-03 -3.1785E-04  2.7905E-03  
+         35   3         4.7781E+07  2.0713E+07  3.4310E+06  5.9381E-04  9.1126E-05  1.2744E-04  
+         35   4         9.0411E+06 -2.1215E+07  2.5118E+07  2.2008E-04 -3.4181E-04  9.3297E-04  
+         36   1        -1.3312E+07  8.3716E+07  9.0347E+06 -5.4895E-04  1.2530E-03  3.3557E-04  
+         36   2        -2.4678E+07  7.0364E+07  1.5638E+07 -6.5410E-04  1.1110E-03  5.8085E-04  
+         36   3         1.0422E+07  8.8923E+07 -1.1539E+06 -2.3221E-04  1.2257E-03 -4.2859E-05  
+         36   4         3.0443E+05  7.7362E+07  4.6725E+06 -3.2720E-04  1.1039E-03  1.7355E-04  
+         37   1         1.4562E+07  1.2067E+08 -1.2710E+07 -3.0914E-04  1.6615E-03 -4.7209E-04  
+         37   2         3.7982E+06  1.0777E+08 -6.3226E+06 -4.0763E-04  1.5234E-03 -2.3484E-04  
+         37   3         5.6329E+06  8.5751E+07 -4.8477E+06 -2.8703E-04  1.2009E-03 -1.8006E-04  
+         37   4        -6.7311E+06  7.1337E+07  2.4467E+06 -4.0189E-04  1.0479E-03  9.0878E-05  
+         38   1         1.6117E+08  1.3161E+08 -5.2729E+07  1.7383E-03  1.1894E-03 -1.9585E-03  
+         38   2         1.6068E+08  1.3602E+08 -5.4097E+07  1.7124E-03  1.2546E-03 -2.0093E-03  
+         38   3         1.6894E+08  1.5621E+08 -4.9287E+07  1.7440E-03  1.5076E-03 -1.8307E-03  
+         38   4         1.6818E+08  1.6070E+08 -5.0955E+07  1.7138E-03  1.5749E-03 -1.8926E-03  
+         39   1         5.4631E+08 -8.7643E+07  8.4926E+06  8.1801E-03 -3.5934E-03  3.1544E-04  
+         39   2         6.9850E+08  1.5967E+07 -5.5952E+07  9.9102E-03 -2.7655E-03 -2.0782E-03  
+         39   3         6.7452E+08  4.0661E+08 -2.3796E+08  7.8934E-03  2.9179E-03 -8.8387E-03  
+         39   4         8.4012E+08  5.0475E+08 -3.0120E+08  9.8385E-03  3.6102E-03 -1.1187E-02  
+         40   1         1.1802E+09 -3.4124E+08  3.1356E+08  1.8323E-02 -9.9329E-03  1.1647E-02  
+         40   2         1.6114E+09 -1.8818E+08  2.3571E+08  2.3826E-02 -9.5942E-03  8.7549E-03  
+         40   3         1.2892E+09  1.0227E+08 -5.8156E+08  1.7979E-02 -4.0642E-03 -2.1601E-02  
+         40   4         1.7348E+09  2.4289E+08 -6.2405E+08  2.3742E-02 -3.9651E-03 -2.3179E-02  
+
+ MAXIMUM                1.7348E+09  2.2328E+09  5.6482E+08  2.3826E-02  3.1694E-02  2.0979E-02                                    
+ ELEMENT                    40           1          33          40           1          33                                     
+
+ MINIMUM               -1.8262E+09 -1.1790E+09 -6.2405E+08 -2.5976E-02 -1.6315E-02 -2.3179E-02                                    
+ ELEMENT                     8          33          40           8          33          40                                     
+
+
+
+
+                                       N O D E   O U T P U T
+
+
+
+
+   THE FOLLOWING TABLE IS PRINTED FOR ALL NODES
+
+       NODE FOOT-   U1          U2          RF1         RF2     
+            NOTE
+
+         1       -1.158       0.000       0.000     -1.4013E+09 
+         2       -1.088      0.1122       0.000       0.000     
+         3      -0.9255      0.2443       0.000       0.000     
+         4      -0.7271      0.4056       0.000       0.000     
+         5      -0.5300      0.5961       0.000       0.000     
+         6      -0.3558      0.8097       0.000       0.000     
+         7      -0.2104       1.026       0.000       0.000     
+         8      -9.4713E-02   1.204       0.000       0.000     
+         9        0.000       1.281      1.2679E+09   0.000     
+        10       -1.167       0.000       0.000     -1.3672E+09 
+        11       -1.080      7.7940E-02   0.000       0.000     
+        12      -0.8781      0.1747       0.000       0.000     
+        13      -0.6322      0.2976       0.000       0.000     
+        14      -0.3865      0.4499       0.000       0.000     
+        15      -0.2458      0.7094       0.000       0.000     
+        16      -0.1367      0.9733       0.000       0.000     
+        17      -5.7120E-02   1.193       0.000       0.000     
+        18        0.000       1.290      1.0318E+09   0.000     
+        19       -1.173       0.000       0.000     -7.4358E+08 
+        20       -1.067      4.2566E-02   0.000       0.000     
+        21      -0.8264      0.1063       0.000       0.000     
+        22      -0.5365      0.1952       0.000       0.000     
+        23      -0.2470      0.3098       0.000       0.000     
+        24      -0.1411      0.6098       0.000       0.000     
+        25      -6.4235E-02  0.9173       0.000       0.000     
+        26      -1.8431E-02   1.179       0.000       0.000     
+        27        0.000       1.294      3.7857E+08   0.000     
+        28       -1.176       0.000       0.000     -1.7234E+08 
+        29       -1.052      4.0494E-03   0.000       0.000     
+        30      -0.7708      3.5161E-02   0.000       0.000     
+        31      -0.4383      9.1723E-02   0.000       0.000     
+        32      -0.1045      0.1678       0.000       0.000     
+        33      -3.4635E-02  0.5090       0.000       0.000     
+        34       1.1281E-02  0.8579       0.000       0.000     
+        35       2.3806E-02   1.161       0.000       0.000     
+        36        0.000       1.297     -2.2426E+08   0.000     
+        37       -1.177       0.000       0.000      3.8485E+08 
+        38       -1.033     -3.9584E-02   0.000       0.000     
+        39      -0.7118     -4.1183E-02   0.000       0.000     
+        40      -0.3376     -1.5658E-02   0.000       0.000     
+        41       4.1036E-02  2.3686E-02   0.000       0.000     
+        42       7.5963E-02  0.4067       0.000       0.000     
+        43       9.2663E-02  0.7956       0.000       0.000     
+        44       7.1962E-02   1.140       0.000       0.000     
+        45        0.000       1.298     -8.1980E+08   0.000     
+        46       -1.177       0.000       0.000      1.2996E+09 
+        47       -1.012     -9.0498E-02   0.000       0.000     
+        48      -0.6502     -0.1240       0.000       0.000     
+        49      -0.2354     -0.1265       0.000       0.000     
+        50       0.1875     -0.1212       0.000       0.000     
+        51       0.1897      0.3039       0.000       0.000     
+        52       0.1812      0.7312       0.000       0.000     
+        53       0.1286       1.117       0.000       0.000     
+        54        0.000       1.296     -1.6342E+09   0.000     
+
+ MAXIMUM         0.1897       1.298      1.2679E+09  1.2996E+09
+ AT NODE                51          45           9          46
+
+ MINIMUM         -1.177     -0.1265     -1.6342E+09 -1.4013E+09
+ AT NODE                37          49          54           1
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.10000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.20000    
+       WALLCLOCK TIME (SEC) =          1

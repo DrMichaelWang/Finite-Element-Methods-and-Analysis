@@ -1,0 +1,51 @@
+*Heading 
+2-D plate with hole: 4-noded elements
+*NODE
+99999,0.0,0.0
+*NODE,NSET=N1
+       1,    16.00000,      .00000
+*NODE,NSET=N2
+       9,     .00000,     16.00000
+*NODE,NSET=N3
+      721,   20.00000,      .00000
+*NODE,NSET=N4
+      725,   20.00000,    20.00000
+*NODE,NSET=N5
+      729,     .00000,    20.00000
+*NGEN,NSET=ARC1,LINE=C
+        1,      9,         1,     99999,0.,0.,0.
+*NGEN,NSET=ROW1
+      721,    725,         1     
+*NGEN,NSET=ROW1
+      725,    729,         1
+*NFILL,NSET=ALL, BIAS= 1.000
+ARC1,ROW1,     80,         9
+*ELEMENT, ELSET=ALL, TYPE=CPS4
+       1,         1,      10,        11,       2
+*ELGEN, ELSET=ALL
+       1,         8,       1,         1,      80,      9,      8
+*ELSET,ELSET=TOP,GENERATE
+  637,640,1
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1.0
+*NSET, NSET=YAXIS,GENERATE
+        9,     729,       9
+*NSET, NSET=XAXIS,GENERATE
+        1,     721,       9
+*MATERIAL,NAME=ALUM
+*ELASTIC
+  .7000E+11, .3000e+00
+*STEP
+*STATIC
+1.0,1.0,1.e-6
+*BOUNDARY
+XAXIS,2,2,0.0
+YAXIS,1,1,0.0
+*DLOAD
+TOP,P2,-100e6
+*NODE PRINT
+U,RF
+*EL PRINT
+S,E
+*END STEP
+  

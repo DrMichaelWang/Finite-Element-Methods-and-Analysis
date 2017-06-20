@@ -1,0 +1,77 @@
+*Heading 
+POINT LOAD: 8-noded elements
+*NODE,NSET=N1
+       1,     15.00000,    30.00000
+*NODE,NSET=N1
+      81,     15.00000,    30.00000
+*NODE,NSET=N2
+     163,     14.99999,    30.00000
+*NODE,NSET=N3
+     243,     15.00001,    30.00000
+*NODE,NSET=N4
+    3403,     14.00000,    30.00000
+*NODE,NSET=N5
+    3483,     16.00000,    30.00000
+*NODE,NSET=N6
+    6643,     10.00000,    30.00000
+*NODE,NSET=N7
+    6723,     20.00000,    30.00000
+*NODE,NSET=N8
+   22843,      0.00000,    30.00000
+*NODE,NSET=N9
+   22863,      0.00000,     0.00000
+*NODE,NSET=N10
+   23003,     30.00000,     0.00000
+*NODE,NSET=N11
+   23023,     30.00000,    30.00000
+*NGEN,NSET=ARC1
+        1,     81,         1
+*NGEN,NSET=ARC2,LINE=C
+      163,    243,         1,     1,15.,30.,0.,0,0,1
+*NGEN,NSET=ARC3,LINE=C
+     3403,   3483,         1,     1,15.,30.,0.,0,0,1
+*NGEN,NSET=ARC4,LINE=C
+     6643,   6723,         1,     1,15.,30.,0.,0,0,1
+*NFILL,NSET=ALL, SINGULAR=1
+ARC1,ARC2,      2,        81
+*NFILL,NSET=ALL, BIAS=1.000
+ARC2,ARC3,     40,        81
+*NFILL,NSET=ALL, BIAS=1.000
+ARC3,ARC4,     40,        81
+*NGEN,NSET=ROW1
+    22843,  22863,         1  
+*NGEN,NSET=ROW1
+    22863,  23003,         1     
+*NGEN,NSET=ROW1
+    23003,  23023,         1
+*NFILL,NSET=ALL, BIAS= 1.000
+ARC4,ROW1,    200,        81
+*ELEMENT, ELSET=ALL, TYPE=CPS8
+       1,         1,     163,       165,       3,     82,    164,      84,     2
+*ELGEN, ELSET=ALL
+       1,        40,       2,         1,     141,    162,     40
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1000.0
+*NSET, NSET=YAXIS,GENERATE
+   22843,      22863,       81
+*NSET, NSET=YAXIS,GENERATE
+   23003,      23023,       81
+*NSET, NSET=XAXIS,GENERATE
+   22863,      23003,      1
+*MATERIAL,NAME=ALUM
+*ELASTIC
+  .7000E+11, .3000e+00
+*STEP
+*STATIC
+1.0,1.0,1.e-6
+*BOUNDARY
+XAXIS,2,2,0.0
+YAXIS,1,1,0.0
+*CLOAD
+1,2,-1000
+*NODE PRINT
+U,RF
+*EL PRINT
+S,E
+*END STEP
+  

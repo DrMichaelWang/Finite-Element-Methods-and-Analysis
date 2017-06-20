@@ -1,0 +1,73 @@
+*Heading 
+CRACK TIP: 8-noded elements
+*NODE,NSET=N1
+       1,      1.00000,      .00000
+*NODE,NSET=N1
+      41,      1.00000,      .00000
+*NODE,NSET=N2
+      83,      1.0001,      .00000
+*NODE,NSET=N3
+     123,      0.9999,      .00000
+*NODE,NSET=N4
+    2543,      2.00000,      .00000
+*NODE,NSET=N5
+    2583,      0.00000,      .00000
+*NODE,NSET=N6
+    4183,      5.00000,      .00000
+*NODE,NSET=N7
+    4223,      0.00000,     5.00000
+*NODE,NSET=N8
+    5003,     50.00000,      .00000
+*NODE,NSET=N9
+    5023,     50.00000,    50.00000
+*NODE,NSET=N10
+    5043,      0.00000,    50.00000
+*NGEN,NSET=ARC1
+        1,     41,         1
+*NGEN,NSET=ARC2,LINE=C
+       83,    123,         1,     1, 1.,0.,0.,0,0,1
+*NGEN,NSET=ARC3,LINE=C
+     2543,   2583,         1,     1, 1.,0.,0.,0,0,1
+*NGEN,NSET=ARC4,LINE=C
+     4183,   4223,         1,  2583, 0.,0.,0.,0,0,1
+*NFILL,NSET=ALL, SINGULAR=1
+ARC1,ARC2,      2,        41
+*NFILL,NSET=ALL, BIAS=1.000
+ARC2,ARC3,     60,        41
+*NFILL,NSET=ALL, BIAS=1.000
+ARC3,ARC4,     40,        41
+*NGEN,NSET=ROW1
+     5003,   5023,         1     
+*NGEN,NSET=ROW1
+     5023,   5043,         1
+*NFILL,NSET=ALL, BIAS= 1.000
+ARC4,ROW1,     20,        41
+*ELEMENT, ELSET=ALL, TYPE=CPS8
+       1,         1,      83,        85,       3,     42,     84,      44,     2
+*ELGEN, ELSET=ALL
+       1,        20,       2,         1,      61,     82,     20
+*ELSET,ELSET=TOP,GENERATE
+     1211,1220,1
+*SOLID SECTION, ELSET=ALL, MAT=ALUM
+1.0
+*NSET, NSET=YAXIS,GENERATE
+      2583, 5043,       41
+*NSET, NSET=XAXIS,GENERATE
+       1,   5003,       41
+*MATERIAL,NAME=ALUM
+*ELASTIC
+  .7000E+11, .3000e+00
+*STEP
+*STATIC
+1.0,1.0,1.e-6
+*BOUNDARY
+XAXIS,2,2,0.0
+YAXIS,1,1,0.0
+*DLOAD
+TOP,P2,-1000
+*NODE PRINT
+U,RF
+*EL PRINT
+S,E
+*END STEP
+  
